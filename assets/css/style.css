@@ -1,0 +1,88 @@
+:root {
+  --main-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.block {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.block:nth-child(3n+1) {
+  background: rgb(254, 191, 154);
+  background: linear-gradient(90deg, rgba(254, 191, 154, 1) 0%, rgba(248, 128, 147, 1) 100%);
+}
+
+.block:nth-child(3n+2) {
+  background: rgb(141, 200, 243);
+  background: linear-gradient(90deg, rgba(141, 200, 243, 1) 0%, rgba(17, 138, 222, 1) 100%);
+}
+
+.block:nth-child(3n) {
+  background: rgb(128, 216, 208);
+  background: linear-gradient(90deg, rgba(128, 216, 208, 1) 0%, rgba(4, 207, 180, 1) 100%);
+}
+
+.block+.block {
+  margin-left: 40px;
+}
+
+.content-wrapper {
+  padding: 30px;
+}
+
+.title-text {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.title-text,
+.title-icon {
+  display: inline-block;
+}
+
+.title-icon {
+  margin-left: 180px;
+}
+
+.price {
+  font-size: 30px;
+  margin: 30px 0 60px;
+}
+
+.change-percent {
+  font-size: 16px;
+}
+
+.block::after,
+.block::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.295);
+}
+
+.block::after {
+  top: -5%;
+  right: -20%;
+}
+
+.block::before {
+  bottom: -35%;
+  right: -5%;
+}
